@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 import { EDUCATION, JOURNEY_LINKS } from '../constants';
 import { Dot, Circle } from 'lucide-react';
-import { FaCircle } from 'react-icons/fa';
+// import { FaCircle } from 'react-icons/fa';
 import { useState } from 'react';
 import Experience from './Experience';
 const Journey = () => {

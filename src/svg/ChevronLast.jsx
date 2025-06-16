@@ -1,4 +1,6 @@
 import { motion, useAnimation } from 'motion/react';
+import { useContext } from 'react';
+import { ThemeContext } from '../context/ThemeContext';
 
 const defaultTransition = {
   type: 'spring',
@@ -10,10 +12,11 @@ const ChevronLast = ({
   width = 28,
   height = 28,
   strokeWidth = 2,
-  stroke = '#ffffff',
+
   ...props
 }) => {
   const controls = useAnimation();
+  const { theme } = useContext(ThemeContext);
 
   return (
     <div
@@ -34,7 +37,7 @@ const ChevronLast = ({
         height={height}
         viewBox="0 0 24 24"
         fill="none"
-        stroke={stroke}
+        stroke={` ${theme === 'dark' ? '#dbd8e3' : ' #2a2431'}`}
         strokeWidth={strokeWidth}
         strokeLinecap="round"
         strokeLinejoin="round"

@@ -6,6 +6,7 @@ import About from './components/About';
 import Journey from './components/Journey';
 import { AnimatedTooltip } from './components/UI/AnimatedTooltip';
 import Projects from './components/Projects';
+import Contact from './components/Contact';
 
 function App() {
   const { theme } = useContext(ThemeContext);
@@ -25,6 +26,7 @@ function App() {
         <About />
         <Journey />
         <Projects />
+        <Contact />
       </div>
     </>
   );

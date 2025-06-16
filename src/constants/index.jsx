@@ -137,19 +137,19 @@ export const JOURNEY_LINKS = [
   { label: <Notebook />, href: '#skill', title: 'Skills' },
 ];
 
-import { FaCircle } from 'react-icons/fa';
+// import { FaCircle } from 'react-icons/fa';
 
-export const events = [
-  {
-    icon: <FaCircle className="text-[#473f4e] text-2xl" />,
-    year: '2021',
-    title: 'Started Learning Programming',
-    description: 'Began my journey with HTML, CSS, and JavaScript.',
-  },
-  {
-    icon: <FaCircle className="text-[#473f4e] text-2xl" />,
-    year: '2022',
-    title: 'Built My First Project',
-    description: 'Created a simple to-do app using React.',
-  },
-];
+// export const events = [
+//   {
+//     icon: <FaCircle className="text-[#473f4e] text-2xl" />,
+//     year: '2021',
+//     title: 'Started Learning Programming',
+//     description: 'Began my journey with HTML, CSS, and JavaScript.',
+//   },
+//   {
+//     icon: <FaCircle className="text-[#473f4e] text-2xl" />,
+//     year: '2022',
+//     title: 'Built My First Project',
+//     description: 'Created a simple to-do app using React.',
+//   },
+// ];

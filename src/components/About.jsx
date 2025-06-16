@@ -5,8 +5,8 @@ import { ABOUT_CONTENT } from '../constants';
 import { motion } from 'framer-motion';
 import { Send, Download } from 'lucide-react';
 import ArrowLeft from '../svg/ArrowLeft';
-import ArrowRight from '../svg/ArrowRight';
-import ScribbleOne from '../svg/ScribbleOne';
+// import ArrowRight from '../svg/ArrowRight';
+// import ScribbleOne from '../svg/ScribbleOne';
 import ScribbleTwo from '../svg/ScribbleTwo';
 import ConatctBtn from './buttons/ConatctBtn';
 

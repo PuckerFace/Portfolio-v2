@@ -16,7 +16,6 @@ import githubLight from '../assets/github-light.svg';
 // import instagramLight from '../assets/instagram-light.svg';
 import xLight from '../assets/xlight.svg';
 import x from '../assets/x.svg';
-
 import linkedin from '../assets/linkedin.svg';
 import linkedinLight from '../assets/linkedin-light.svg';
 import { useContext } from 'react';
@@ -214,7 +213,7 @@ const Hero = () => {
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: 100 }}
         transition={{ duration: 2.5 }}
-        className="order-3 scroll-smooth  flex flex-col items-center gap-2 lg:gap-8 justify-center "
+        className="order-3   flex flex-col items-center gap-2 lg:gap-8 justify-center "
         href="#about"
       >
         <div className="mb-3 hidden lg:block">
