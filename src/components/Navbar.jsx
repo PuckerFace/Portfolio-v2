@@ -235,14 +235,14 @@ const Navbar = () => {
       <div className="fixed left-0 right-0 top-0 p-2 z-50 backdrop-blur-xl  shadow-xs  border-b border-[#473f4e]">
         <div className="flex justify-around items-center p-3">
           <div>
-            <a href="/" aria-label="Home" className="text-3xl">
-              Bukky
+            <a href="#home" aria-label="Home" className="text-3xl flex gap-1.5">
+              Bukola
               <span
                 className={` ${
                   theme === 'dark' ? ' text-[#473f4e]' : 'text-[#c3b1e1] '
                 } `}
               >
-                .
+                A.
               </span>
             </a>
           </div>

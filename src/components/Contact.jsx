@@ -13,7 +13,7 @@ import ArrowLeft from '../svg/ArrowLeft';
 
 const Contact = () => {
   const { theme } = useContext(ThemeContext);
-  const [status, setStatus] = useState(null); // Optional: to manage form submission status
+  const [status, setStatus] = useState(null);
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -81,7 +81,7 @@ const Contact = () => {
             theme === 'dark'
               ? 'bg-[#dbd8e3] text-[#2c2732]'
               : ' bg-[#2c2732] text-[#dbd8e3]'
-          } lg:absolute lg:-top-50 lg:right-55  `}
+          } lg:absolute lg:-top-40 lg:right-25  `}
           //   top-25  left-5
         >
           <h3>Get in Touch </h3>

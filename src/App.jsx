@@ -7,6 +7,7 @@ import Journey from './components/Journey';
 import { AnimatedTooltip } from './components/UI/AnimatedTooltip';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
   const { theme } = useContext(ThemeContext);
@@ -27,6 +28,7 @@ function App() {
         <Journey />
         <Projects />
         <Contact />
+        <Footer />
       </div>
     </>
   );
