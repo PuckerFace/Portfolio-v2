@@ -74,7 +74,10 @@ const Contact = () => {
         <h2 className=" absolute top-8 z-2 text-4xl">Contact Me</h2>
       </div>
       <div className="relative  mt-20 flex lg:flex-col flex-col-reverse  items-center justify-center    lg:p-12 p-2 ">
-        <div
+        <motion.div
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: 100 }}
+          transition={{ duration: 1.2 }}
           className={` flex flex-col gap-4 p-6 rounded-b-lg  lg:rounded-lg shadow-lg w-full lg:w-[350px] border-b-3    ${
             theme === 'dark'
               ? 'bg-[#dbd8e3] text-[#2c2732] border-b-[#c3b1e1]'
@@ -148,8 +151,11 @@ const Contact = () => {
               <ArrowLeft />
             </motion.div>
           </div>
-        </div>
-        <div
+        </motion.div>
+        <motion.div
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -100 }}
+          transition={{ duration: 1.2 }}
           className={`flex flex-col p-4 gap-2 lg:p-10 rounded-t-lg  lg:rounded-lg shadow-lg w-full lg:w-[600px] ${
             theme === 'dark'
               ? '  text-[#3a3440] bg-[#c3b1e1]/40'
@@ -230,7 +236,7 @@ const Contact = () => {
               </button>
             </div>
           </form>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

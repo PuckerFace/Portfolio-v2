@@ -6,11 +6,11 @@ const Footer = () => {
   return (
     <div>
       <footer
-        className={` ${
+        className={`bg-gradient-to-r  ${
           theme === 'dark'
-            ? 'bg-[#dbd8e3] text-[#2c2732]'
-            : ' bg-[#2c2732] text-[#dbd8e3]'
-        } `}
+            ? 'from-[#c3b1e1] to-[#2a2431]/50 text-[#2a2431]'
+            : 'from-[#2a2431]/50 to-[#2a2431] text-[#dbd8e3]'
+        }   `}
       >
         <div className="container mx-auto text-center p-4">
           <p className="text-sm">

@@ -1,13 +1,17 @@
 import React, { useContext } from 'react';
 import { EDUCATION } from '../constants';
 import { ThemeContext } from '../context/ThemeContext';
+import { motion } from 'framer-motion';
 
 const Education = () => {
   const { theme } = useContext(ThemeContext);
   return (
     <div className="flex  w-full ">
       {EDUCATION.map((edu, index) => (
-        <div
+        <motion.div
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -100 }}
+          transition={{ duration: 1.2 }}
           key={index}
           className={`w-full   md:w-[350px] bg-transparent  backdrop-blur-sm   shadow-xl p-6 rounded-xl border-b-3 ${
             theme === 'dark'
@@ -42,7 +46,7 @@ const Education = () => {
               {skill}
             </span>
           ))}
-        </div>
+        </motion.div>
       ))}
     </div>
   );

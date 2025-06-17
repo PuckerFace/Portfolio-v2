@@ -222,7 +222,7 @@ const Hero = () => {
         <div className="lg:mb-3 ml-1">
           <p className=" lg:rotate-90">scroll down</p>
         </div>
-        <div>
+        <div className="animate-bounce">
           <ChevronsDown />
         </div>
       </motion.a>
