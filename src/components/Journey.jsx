@@ -6,9 +6,10 @@ import { Dot, Circle } from 'lucide-react';
 // import { FaCircle } from 'react-icons/fa';
 import { useState } from 'react';
 import Experience from './Experience';
+import Education from './Education';
 const Journey = () => {
   const { theme } = useContext(ThemeContext);
-  const [activeLink, setActiveLink] = useState('#edu');
+  const [activeLink, setActiveLink] = useState('#exp');
   const handleLink = (e, href) => {
     e.preventDefault;
     setActiveLink(href);
@@ -71,26 +72,7 @@ const Journey = () => {
           <div className="absolute top-0 -left-4 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-md opacity-70  animate-blob "></div>
           <div className="absolute top-0 -right-4 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-md opacity-70 animate-blob animation-delay-2"></div>
           <div className="absolute left-20 -bottom-8 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-md opacity-70 animate-blob animation-delay-4"></div>
-          {activeLink === '#edu' && (
-            <div className="flex  w-full ">
-              {EDUCATION.map((edu, index) => (
-                <div
-                  key={index}
-                  className="w-full  md:w-[350px] bg-transparent  backdrop-blur-sm   shadow-xl p-6 rounded-xl"
-                >
-                  <h1>{edu.title}</h1>
-                  <p>{edu.school}</p>
-                  <div>
-                    <p>{edu.location}</p>
-                    <p>{edu.date}</p>
-                  </div>
-                  {edu.skills.map((skill, skillIndex) => (
-                    <p key={skillIndex}>{skill}</p>
-                  ))}
-                </div>
-              ))}
-            </div>
-          )}
+
           {activeLink === '#exp' && (
             // <div className="flex  w-full ">
             //   <div className="flex flex-col gap-4">
@@ -111,6 +93,7 @@ const Journey = () => {
             // </div>
             <Experience />
           )}
+          {activeLink === '#edu' && <Education />}
         </div>
       </div>
     </div>

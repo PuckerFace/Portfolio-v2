@@ -181,6 +181,7 @@ import { Sun, Menu, Moon } from 'lucide-react';
 import { NAVIGATION_LINKS } from '../constants';
 import { ThemeContext } from '../context/ThemeContext';
 import { useContext } from 'react';
+import { Button } from './UI/MovingBorder';
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState(null);
@@ -248,13 +249,27 @@ const Navbar = () => {
           </div>
 
           <div className="flex gap-2 items-center justify-between">
-            <div>
+            {/* <div>
               <a
                 href=""
                 className="border-2 border-[#473f4e] rounded-full py-2 px-3"
               >
                 Let's Talk.
               </a>
+            </div> */}
+            <div>
+              <Button
+                borderRadius="2rem"
+                className={` ${
+                  theme === 'dark'
+                    ? 'bg-[#2c2732] border-[#cbc6d9] '
+                    : 'bg-[#dbd8e3] border-[#473f4e]'
+                }`}
+              >
+                <a href="#contact" className="">
+                  Let's Talk.
+                </a>
+              </Button>
             </div>
             <motion.div
               whileTap={{ scale: 0.95 }}

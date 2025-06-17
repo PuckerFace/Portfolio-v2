@@ -11,7 +11,8 @@ import {
   Send,
   GraduationCap,
   Rocket,
-  Notebook,
+  Dumbbell,
+  Wrench,
 } from 'lucide-react';
 // import { Rocket } from '../svg/Rocket';
 
@@ -45,7 +46,7 @@ export const EDUCATION = [
     title: 'Bachelor of Computer Science ',
     location: 'Ilishan-Remo, Nigeria',
     school: 'Babcock University',
-    date: '2023 - 2027',
+    date: 'Oct 2023 - Jul 2027',
     skills: ['Java', 'c', 'c++'],
   },
 ];
@@ -102,10 +103,17 @@ export const NAVIGATION_LINKS = [
     dis: 'translate-x-16',
   },
   {
+    label: <Wrench />,
+    href: '#skills',
+    title: 'Skills',
+    id: 3,
+    dis: 'translate-x-48',
+  },
+  {
     label: <Route />,
     href: '#journey',
     title: 'Journey',
-    id: 3,
+    id: 4,
     dis: 'translate-x-32',
   },
   // {
@@ -115,6 +123,7 @@ export const NAVIGATION_LINKS = [
   //   id: 4,
   //   dis: 'translate-x-48',
   // },
+
   {
     label: <BriefcaseBusiness />,
     href: '#work',
@@ -134,7 +143,6 @@ export const NAVIGATION_LINKS = [
 export const JOURNEY_LINKS = [
   { label: <Rocket />, href: '#exp', title: 'Experience' },
   { label: <GraduationCap />, href: '#edu', title: 'Education' },
-  { label: <Notebook />, href: '#skill', title: 'Skills' },
 ];
 
 // import { FaCircle } from 'react-icons/fa';

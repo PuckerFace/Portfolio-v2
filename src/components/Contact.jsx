@@ -77,10 +77,10 @@ const Contact = () => {
       </motion.div>
       <div className="relative  mt-20 flex lg:flex-col flex-col-reverse  items-center justify-center    lg:p-12 p-2 ">
         <div
-          className={` flex flex-col gap-4 p-6 rounded-b-lg  lg:rounded-lg shadow-lg w-full lg:w-[350px] border-b-3 border-b-[#473f4e]   ${
+          className={` flex flex-col gap-4 p-6 rounded-b-lg  lg:rounded-lg shadow-lg w-full lg:w-[350px] border-b-3    ${
             theme === 'dark'
-              ? 'bg-[#dbd8e3] text-[#2c2732]'
-              : ' bg-[#2c2732] text-[#dbd8e3]'
+              ? 'bg-[#dbd8e3] text-[#2c2732] border-b-[#c3b1e1]'
+              : ' bg-[#2c2732] text-[#dbd8e3] border-b-[#473f4e]'
           } lg:absolute lg:-top-40 lg:right-25  `}
           //   top-25  left-5
         >
