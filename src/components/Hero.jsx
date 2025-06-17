@@ -5,7 +5,7 @@ import github from '../assets/github.svg';
 import githubLight from '../assets/github-light.svg';
 // import instagram from '../assets/instagram.svg';
 // import instagramLight from '../assets/instagram-light.svg';
-import xLight from '../assets/xlight.svg';
+import xLight from '../assets/xLight.svg';
 import x from '../assets/x.svg';
 import linkedin from '../assets/linkedin.svg';
 import linkedinLight from '../assets/linkedin-light.svg';
