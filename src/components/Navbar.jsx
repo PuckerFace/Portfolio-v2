@@ -260,13 +260,20 @@ const Navbar = () => {
             <div>
               <Button
                 borderRadius="2rem"
-                className={` ${
+                className={`border ${
                   theme === 'dark'
-                    ? 'bg-[#2c2732] border-[#cbc6d9] '
-                    : 'bg-[#dbd8e3] border-[#473f4e]'
+                    ? 'bg-[#2c2732] border-[#2a2431] '
+                    : 'bg-[#dbd8e3] border-[#cac3d4]'
                 }`}
               >
-                <a href="#contact" className="">
+                <a
+                  href="#contact"
+                  className={`text-transparent  bg-gradient-to-r ${
+                    theme === 'dark'
+                      ? 'from-[#cac3d4] to-[#a08cbf]   '
+                      : 'from-[#2a2431]/50 to-[#2a2431] '
+                  } bg-clip-text`}
+                >
                   Let's Talk.
                 </a>
               </Button>
@@ -311,10 +318,11 @@ const Navbar = () => {
             <div className="flex items-center justify-between gap-4 lg:gap-6">
               <div className="">
                 <ul className="flex items-center gap-2 lg:gap-6 ">
-                  {NAVIGATION_LINKS.map((link, index) => (
+                  {/* {NAVIGATION_LINKS.map((link, index) => (
                     <li key={index}>
                       <a
                         href={link.href}
+                        title={link.title}
                         className={`inline-flex flex-col  cursor-pointer items-center justify-center p-2 text-base  rounded-full  transition-all duration-500 ${
                           theme === 'dark'
                             ? ' text-[#dbd8e3]'
@@ -330,6 +338,39 @@ const Navbar = () => {
                       >
                         {link.label}
                       </a>
+                    </li>
+                  ))} */}
+                  {NAVIGATION_LINKS.map((link, index) => (
+                    <li key={index} className="relative group">
+                      <a
+                        href={link.href}
+                        onClick={(e) => handleLink(e, link.href)}
+                        className={`inline-flex flex-col cursor-pointer items-center justify-center p-2 text-base rounded-full transition-all duration-500
+        ${theme === 'dark' ? 'text-[#dbd8e3]' : 'text-[#2a2431]'}
+        ${
+          activeLink === link.href
+            ? theme === 'dark'
+              ? 'bg-[#39323f]'
+              : 'bg-[#beb6d4]'
+            : ''
+        }
+      `}
+                      >
+                        {link.label}
+                      </a>
+
+                      {/* Tooltip */}
+                      <span
+                        className={`absolute -top-10 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md px-2 py-1 text-xs shadow-md transition-all duration-200 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100
+        ${
+          theme === 'dark'
+            ? 'bg-[#39323f] text-[#beb6d4]'
+            : 'bg-[#beb6d4] text-[#2a2431]'
+        }
+      `}
+                      >
+                        {link.title}
+                      </span>
                     </li>
                   ))}
                 </ul>

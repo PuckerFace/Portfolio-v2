@@ -17,26 +17,24 @@ const Journey = () => {
   return (
     // flex
     <div
-      className={`transition-all  duration-500 my-40  h-full lg:h-screen flex flex-col gap-8  items-center justify-center  ${
+      className={`transition-all  duration-500 mb-40 mt-20  h-full lg:h-screen flex flex-col gap-8  items-center justify-center  ${
         theme === 'dark' ? ' text-[#dbd8e3]' : 'text-[#3a3440] '
       }`}
       id="journey"
     >
-      <motion.div
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 1.5 }}
-        className="flex flex-col items-center relative"
-      >
-        <h1
+      <div className="flex flex-col items-center relative">
+        <motion.h1
+          whileInView={{ opacity: 0.2, y: 0 }}
+          initial={{ opacity: 0, y: -100 }}
+          transition={{ duration: 1.5 }}
           className={`tracking-[0.7rem]  opacity-20  z-1  text-7xl ${
             theme === 'dark' ? '  text-[#c3b1e1]' : ' text-[#473f4e]'
           }`}
         >
           Journey
-        </h1>
+        </motion.h1>
         <h2 className=" absolute top-10 z-2 text-4xl">My Journey</h2>
-      </motion.div>
+      </div>
       <div className="flex mt-10">
         <div className="">
           <ul className="flex items-center gap-2 lg:gap-6">

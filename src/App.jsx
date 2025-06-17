@@ -9,6 +9,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Skills from './components/Skills';
+import SmoothFollower from './components/cursor/CustomCursor';
 
 function App() {
   const { theme } = useContext(ThemeContext);
@@ -23,6 +24,7 @@ function App() {
           theme === 'dark' ? 'bg-[#2c2732]' : 'bg-[#dbd8e3]'
         } `}
       >
+        <SmoothFollower />
         <Navbar />
         <Hero />
         <About />

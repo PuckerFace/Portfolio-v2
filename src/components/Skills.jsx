@@ -31,21 +31,19 @@ const Skills = () => {
       }`}
       id="skills"
     >
-      <motion.div
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 1.5 }}
-        className="flex flex-col items-center"
-      >
-        <h1
+      <div className="flex flex-col items-center">
+        <motion.h1
+          whileInView={{ opacity: 0.2, y: 0 }}
+          initial={{ opacity: 0, y: -100 }}
+          transition={{ duration: 1.5 }}
           className={`tracking-[0.7rem]  opacity-20  z-1  text-7xl ${
             theme === 'dark' ? '  text-[#c3b1e1]' : ' text-[#473f4e]'
           }`}
         >
           Skills
-        </h1>
-        <h2 className=" absolute top-10 z-2 text-4xl"> My Skills</h2>
-      </motion.div>
+        </motion.h1>
+        <h2 className=" absolute lg:top-48 top-14 z-2 text-4xl"> My Skills</h2>
+      </div>
 
       <motion.div
         whileInView={{ opacity: 1, x: 0 }}

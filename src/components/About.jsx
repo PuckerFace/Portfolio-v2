@@ -19,21 +19,19 @@ const About = () => {
       }`}
       id="about"
     >
-      <motion.div
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 1.5 }}
-        className="flex flex-col items-center"
-      >
-        <h1
+      <div className="flex flex-col items-center">
+        <motion.h1
+          whileInView={{ opacity: 0.2, y: 0 }}
+          initial={{ opacity: 0, y: -100 }}
+          transition={{ duration: 1.5 }}
           className={`tracking-[0.7rem]  opacity-20  z-1  text-7xl ${
             theme === 'dark' ? '  text-[#c3b1e1]' : ' text-[#473f4e]'
           }`}
         >
           About
-        </h1>
+        </motion.h1>
         <h2 className=" absolute top-10 z-2 text-4xl">About Me</h2>
-      </motion.div>
+      </div>
 
       <div className="flex flex-wrap p-6 lg:flex-row-reverse ">
         <div className="w-full lg:w-1/2 flex justify-center p-2">

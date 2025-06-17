@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 // import picture from '../assets/profile.png';
 // import picture from '../assets/profile.jpg';
 import picture from '../assets/profile2.jpg';
-import arrowright from '../assets/arrowRight.svg';
+
 import { Send, Mouse, ChevronsDown, MoveUp, MoveRight } from 'lucide-react';
 import github from '../assets/github.svg';
 import githubLight from '../assets/github-light.svg';
@@ -132,7 +132,7 @@ const Hero = () => {
           <motion.img
             src={picture}
             alt=""
-            className="rounded-full border-[1.2px] border-pink-300 sm:w-[400px] sm:h-[400px]  object-cover object-center w-[200px] h-[200px]   "
+            className="rounded-full border-3 border-pink-300 sm:w-[400px] sm:h-[400px]  object-cover object-center w-[200px] h-[200px]   "
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 1.5 }}
