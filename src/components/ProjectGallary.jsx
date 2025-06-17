@@ -4,7 +4,6 @@ import { ThemeContext } from '../context/ThemeContext';
 import { PROJECTS } from '../constants';
 import { ChevronFirst } from '../svg/ChevronFirst';
 import { ChevronLast } from '../svg/ChevronLast';
-// import github from '../assets/github.svg';
 import { Github, Link } from 'lucide-react';
 
 const ProjectGallary = () => {
@@ -26,18 +25,11 @@ const ProjectGallary = () => {
   return (
     <div>
       <div className="flex items-center justify-center lg:gap-6">
-        <div
-        //   className="absolute top-1/2 left-6 transform -translate-y-1/2"
-        >
+        <div>
           <ChevronFirst className="cursor-pointer" onClick={handlePrev} />
         </div>
 
         <div className="box lg:w-[500px] lg:h-[500px] w-[300px] h-[300px]  ">
-          {/* <img
-          src={`${PROJECTS[currentIndex].image}`}
-          alt={`${PROJECTS[currentIndex].title}`}
-          className=""
-        /> */}
           <div
             style={{ backgroundImage: `url(${PROJECTS[currentIndex].image})` }}
             className="img bg-center bg-no-repeat bg-cover object-contain p-4 flex flex-col justify-end items-center "
@@ -60,31 +52,15 @@ const ProjectGallary = () => {
                     {tech}
                   </span>
                 ))}
-                {/* <div>
-              <a href="#">
-                <img src={github} alt="" />
-              </a>
-              <a href="#">
-                <Link />
-              </a>
-            </div> */}
               </div>
             </div>
           </div>
-
-          {/* <div
-          style={{ backgroundImage: `url(${PROJECTS[currentIndex].image})` }}
-          className="w-[500px] h-[500px] object-cover bg-cover bg-center rounded-lg shadow-lg transition-transform duration-500 ease-in-out transform hover:scale-[1.2] "
-        >
-          <p>poop</p>
-        </div> */}
           <div className="overlay">
             <div className="flex justify-center items-center gap-4">
               <a
                 href="#"
                 className="flex items-center gap-2 rounded-full border border-[#dbd8e3] bg-[#2a2431] p-2 text-white hover:bg-[#c3b1e1] hover:text-[#2a2431] transition-colors duration-300"
               >
-                {/* <img src={github} alt="" /> */}
                 <Github />
                 <p className="tracking-wider">Github</p>
               </a>
@@ -98,9 +74,7 @@ const ProjectGallary = () => {
             </div>
           </div>
         </div>
-        <div
-        //   className="absolute top-1/2 right-6 transform -translate-y-1/2"
-        >
+        <div>
           <ChevronLast className="cursor-pointer" onClick={handleNext} />
         </div>
       </div>

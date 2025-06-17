@@ -5,8 +5,6 @@ import { ABOUT_CONTENT } from '../constants';
 import { motion } from 'framer-motion';
 import { Send, Download } from 'lucide-react';
 import ArrowLeft from '../svg/ArrowLeft';
-// import ArrowRight from '../svg/ArrowRight';
-// import ScribbleOne from '../svg/ScribbleOne';
 import ScribbleTwo from '../svg/ScribbleTwo';
 import ConatctBtn from './buttons/ConatctBtn';
 
@@ -39,8 +37,6 @@ const About = () => {
             src={picture}
             alt=""
             className=" w-[530px]  rounded-3xl object-contain border-2 border-[#473f4e] shadow-lg"
-            // width={450}
-            // height={450}
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: 100 }}
             transition={{ duration: 1.2 }}
@@ -76,36 +72,9 @@ const About = () => {
             </p>
             <div className="flex gap-3 ">
               <div>
-                {/* <a
-                  href="/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  download
-                  className={`flex gap-1  rounded-full text- p-3 justify-between items-center border-2    ${
-                    theme === 'dark'
-                      ? 'bg-[#dbd8e3] text-[#2a2431]'
-                      : 'bg-[#2a2431] text-[#dbd8e3]'
-                  }`}
-                >
-                  <Download />
-                  My Resume
-                </a> */}
                 <ConatctBtn buttonType={'resume'} buttonStatus={'about'} />
               </div>{' '}
               <div>
-                {/* <a
-                  href="#contact"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`flex gap-1  rounded-full  p-3 justify-between items-center border-2  transparent ${
-                    theme === 'dark'
-                      ? 'border-[#dbd8e3] text-[#dbd8e3]'
-                      : 'border-[#2a2431] text-[#2a2431]'
-                  }`}
-                >
-                  Contact Me
-                  <Send />
-                </a> */}
                 <ConatctBtn buttonType={'contact'} buttonStatus={'about'} />
               </div>
               <div className="self-end hidden lg:block">

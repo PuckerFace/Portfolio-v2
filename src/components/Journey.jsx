@@ -3,7 +3,6 @@ import { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 import { EDUCATION, JOURNEY_LINKS } from '../constants';
 import { Dot, Circle } from 'lucide-react';
-// import { FaCircle } from 'react-icons/fa';
 import { useState } from 'react';
 import Experience from './Experience';
 import Education from './Education';
@@ -15,7 +14,6 @@ const Journey = () => {
     setActiveLink(href);
   };
   return (
-    // flex
     <div
       className={`transition-all  duration-500 mb-40 mt-20  h-full lg:h-screen flex flex-col gap-8  items-center justify-center  ${
         theme === 'dark' ? ' text-[#dbd8e3]' : 'text-[#3a3440] '
@@ -71,26 +69,7 @@ const Journey = () => {
           <div className="absolute top-0 -right-4 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-md opacity-70 animate-blob animation-delay-2"></div>
           <div className="absolute left-20 -bottom-8 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-md opacity-70 animate-blob animation-delay-4"></div>
 
-          {activeLink === '#exp' && (
-            // <div className="flex  w-full ">
-            //   <div className="flex flex-col gap-4">
-            //     {EDUCATION.map((exp, index) => (
-            //       <div key={index} className="">
-            //         <h1>{exp.title}</h1>
-            //         <p>{exp.company}</p>
-            //         <div>
-            //           <p>{exp.location}</p>
-            //           <p>{exp.date}</p>
-            //         </div>
-            //         {exp.skills.map((skill, skillIndex) => (
-            //           <p key={skillIndex}>{skill}</p>
-            //         ))}
-            //       </div>
-            //     ))}
-            //   </div>
-            // </div>
-            <Experience />
-          )}
+          {activeLink === '#exp' && <Experience />}
           {activeLink === '#edu' && <Education />}
         </div>
       </div>

@@ -1,14 +1,5 @@
 import { motion } from 'framer-motion';
-
-// import picture from '../assets/picture.png';
-// import picture from '../assets/picture.gif';
-
-// import pictureBg from '../assets/picture.mp4';
-// import picture from '../assets/pic.png';
-// import picture from '../assets/profile.png';
-// import picture from '../assets/profile.jpg';
 import picture from '../assets/profile2.jpg';
-
 import { Send, Mouse, ChevronsDown, MoveUp, MoveRight } from 'lucide-react';
 import github from '../assets/github.svg';
 import githubLight from '../assets/github-light.svg';
@@ -55,7 +46,6 @@ const Hero = () => {
       }`}
       id="home"
     >
-      {/*  */}
       <div className=" order-2 flex  lg:flex-col items-center gap-4 lg:gap-8 justify-center lg:p-6 ">
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
@@ -110,12 +100,6 @@ const Hero = () => {
           variants={containerVarients}
           className="mb-3 rotate-270 hidden lg:block"
         >
-          {/* <MoveRight /> */}
-          {/* <img
-            src={arrowright}
-            alt=""
-            className="w-16 h-16 fill-pink-400 "
-          /> */}
           <ArrowRight />
         </motion.div>
         <motion.div
@@ -162,7 +146,6 @@ const Hero = () => {
               </motion.h1>
               <motion.h2
                 variants={childVarients}
-                // className="gradient "
                 className={`${
                   theme === 'dark'
                     ? 'bg-gradient-to-r from-[#dbd8e3] to-[#a99fc4]'
@@ -175,16 +158,6 @@ const Hero = () => {
 
             <div className="flex flex-col">
               {' '}
-              {/* <motion.a
-                variants={childVarients}
-                href="#contact"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex gap-1  rounded-full text- p-3 justify-between items-center border-2 bg-[#dbd8e3] text-[#2a2431] "
-              >
-                Contact Me
-                <Send />
-              </motion.a> */}
               <motion.div variants={childVarients}>
                 <ConatctBtn buttonType={'contact'} buttonStatus={'hero'} />
               </motion.div>
@@ -194,20 +167,6 @@ const Hero = () => {
             </div>
           </motion.div>
         </div>
-
-        {/* <div className="flex items-center justify-center mt-2">
-          {' '}
-          <motion.a
-            variants={childVarients}
-            href="#contact"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex gap-1  rounded-full text- p-3 justify-between items-center border-2 bg-[#dbd8e3] text-[#2a2431] lg:hidden"
-          >
-            Contact Me
-            <Send />
-          </motion.a>
-        </div> */}
       </div>
       <motion.a
         whileInView={{ opacity: 1, x: 0 }}
