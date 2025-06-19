@@ -19,7 +19,11 @@ const Experience = () => {
           const isLeft = index % 2 === 0;
 
           return (
-            <div
+            <motion.div
+              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: -100 }}
+              transition={{ duration: 1.2 }}
+              viewport={{ once: true }}
               key={index}
               className={`mb-12 flex flex-col md:flex-row items-center ${
                 isLeft ? 'md:justify-start' : 'md:justify-end'
@@ -77,7 +81,7 @@ const Experience = () => {
                   theme === 'dark' ? 'border-[#c3b1e1] ' : 'border-[#2a2431] '
                 } w-8 h-8 rounded-full z-20`}
               ></div>
-            </div>
+            </motion.div>
           );
         })}
       </div>

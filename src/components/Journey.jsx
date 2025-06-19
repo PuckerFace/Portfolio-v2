@@ -27,6 +27,7 @@ const Journey = () => {
           whileInView={{ opacity: 0.2, y: 0 }}
           initial={{ opacity: 0, y: -100 }}
           transition={{ duration: 1.5 }}
+          viewport={{ once: true }}
           className={`tracking-[0.7rem]  opacity-20  z-1  text-7xl ${
             theme === 'dark' ? '  text-[#c3b1e1]' : ' text-[#473f4e]'
           }`}

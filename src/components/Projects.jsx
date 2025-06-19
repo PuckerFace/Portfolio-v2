@@ -24,13 +24,16 @@ const Projects = () => {
           whileInView={{ opacity: 0.2, y: 0 }}
           initial={{ opacity: 0, y: -100 }}
           transition={{ duration: 1.5 }}
+          viewport={{ once: true }}
           className={`tracking-[0.7rem]  opacity-20  z-1  text-7xl ${
             theme === 'dark' ? '  text-[#c3b1e1]' : ' text-[#473f4e]'
           }`}
         >
           Projects
         </motion.h1>
-        <h2 className=" absolute top-10 lg:-top-4   z-2 text-4xl">My Works</h2>
+        <h2 className=" absolute top-10 lg:-top-4   z-2 text-4xl">
+          My Projects
+        </h2>
       </div>
       <div className="mt-10">
         <ErrorBoundary fallbackRender={fallbackRender} onReset={() => {}}>
