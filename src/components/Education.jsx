@@ -12,6 +12,7 @@ const Education = () => {
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 1.2 }}
+          viewport={{ once: true }}
           key={index}
           className={`w-full   md:w-[350px] bg-transparent  backdrop-blur-sm   shadow-xl p-6 rounded-xl border-b-3 ${
             theme === 'dark'

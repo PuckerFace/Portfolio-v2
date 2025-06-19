@@ -19,7 +19,6 @@ const ConatctBtn = ({ buttonType, buttonStatus }) => {
         >
           <a
             href="#contact"
-            target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center text-sm lg:text-base"
           >

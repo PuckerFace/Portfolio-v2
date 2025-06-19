@@ -17,6 +17,7 @@ const ContactCard = () => {
       whileInView={{ opacity: 1, x: 0 }}
       initial={{ opacity: 0, x: 100 }}
       transition={{ duration: 1.2 }}
+      viewport={{ once: true }}
       className={` flex flex-col gap-4 p-6 rounded-b-lg  lg:rounded-lg shadow-lg w-full lg:w-[350px] border-b-3    ${
         theme === 'dark'
           ? 'bg-[#dbd8e3] text-[#2c2732] border-b-[#c3b1e1]'

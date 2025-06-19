@@ -1,12 +1,14 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
-import picture from '../assets/birthdayshoot9.jpg';
-import { ABOUT_CONTENT } from '../constants';
 import { motion } from 'framer-motion';
-import { Send, Download } from 'lucide-react';
-import ArrowLeft from '../svg/ArrowLeft';
-import ScribbleTwo from '../svg/ScribbleTwo';
-import ConatctBtn from './buttons/ConatctBtn';
+
+import picture from '../assets/birthdayshoot9.webp'; // ✅ normal import
+import { ABOUT_CONTENT } from '../constants/index'; // or destructure if needed
+const ArrowLeft = React.lazy(() => import('../svg/ArrowLeft'));
+const ScribbleTwo = React.lazy(() => import('../svg/ScribbleTwo'));
+const ConatctBtn = React.lazy(() => import('./buttons/ConatctBtn'));
+
+console.log('Importing About');
 
 const About = () => {
   const { theme } = useContext(ThemeContext);
@@ -40,6 +42,11 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: 100 }}
             transition={{ duration: 1.2 }}
+            viewport={{ once: true }}
+            loading="lazy"
+            width={530}
+            height={530}
+            effect="blur"
           />
         </div>
         <div className="w-full lg:w-1/2 flex justify-center p-2 items-center">
@@ -47,11 +54,12 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: -100 }}
             transition={{ duration: 1.2 }}
+            viewport={{ once: true }}
             className="flex flex-col  gap-2"
           >
             <div className="flex flex-col  ">
               {' '}
-              <h2 className="lg:text-5xl text-2xl   lg:racking-wider">
+              <h2 className="lg:text-5xl text-2xl   lg:tracking-wider">
                 I am a{' '}
                 <span
                   className={` ${

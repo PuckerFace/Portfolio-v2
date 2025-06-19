@@ -28,10 +28,7 @@ const Experience = () => {
               }`}
             >
               {/* Card */}
-              <motion.div
-                whileInView={{ opacity: 1, x: 0 }}
-                initial={{ opacity: 0, x: 100 }}
-                transition={{ duration: 1.2 }}
+              <div
                 className={`w-full md:w-1/2 flex ${
                   isLeft ? 'md:justify-end md:pr-8' : 'md:justify-start md:pl-8'
                 } z-10`}
@@ -70,7 +67,7 @@ const Experience = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Timeline Dot */}
               <div

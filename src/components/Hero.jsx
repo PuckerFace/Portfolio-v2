@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import picture from '../assets/profile2.jpg';
+import picture from '../assets/profile2.webp';
 import { Send, Mouse, ChevronsDown, MoveUp, MoveRight } from 'lucide-react';
 import github from '../assets/github.svg';
 import githubLight from '../assets/github-light.svg';
@@ -16,28 +16,6 @@ import ScribbleOne from '../svg/ScribbleOne';
 import ConatctBtn from './buttons/ConatctBtn';
 
 const Hero = () => {
-  const containerVarients = {
-    hidden: { opacity: 0, x: -100 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.5,
-        staggerChildren: 0.5,
-      },
-    },
-  };
-  const childVarients = {
-    hidden: { opacity: 0, x: -100 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
-
   const { theme } = useContext(ThemeContext);
   return (
     <div
@@ -47,12 +25,7 @@ const Hero = () => {
       id="home"
     >
       <div className=" order-2 flex  lg:flex-col items-center gap-4 lg:gap-8 justify-center lg:p-6 ">
-        <motion.div
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: 100 }}
-          transition={{ duration: 1.5 }}
-          className="lg:mb-3 flex lg:flex-col gap-4 lg:px-4"
-        >
+        <div className="lg:mb-3 flex lg:flex-col gap-4 lg:px-4">
           <a
             href="https://x.com/PuckerFace7"
             target="_blank"
@@ -93,59 +66,42 @@ const Hero = () => {
               className="w-10 lg:w-6 duration-200 ease-in hover:scale-130 cursor-pointer"
             />
           </a>
-        </motion.div>
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={containerVarients}
-          className="mb-3 rotate-270 hidden lg:block"
-        >
+        </div>
+        <div className="mb-3 rotate-270 hidden lg:block">
           <ArrowRight />
-        </motion.div>
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={containerVarients}
-          className=" mb-1 lg:mr-1 hidden lg:block"
-        >
+        </div>
+        <div className=" mb-1 lg:mr-1 hidden lg:block">
           <p className="  rotate-270">socials</p>
-        </motion.div>
+        </div>
       </div>
       <div className="w-3/4 flex flex-col p-6 lg:flex-row justify-center gap-2 lg:order-2 order-1">
         <div className=" flex justify-center lg:p-2 ">
-          <motion.img
+          <img
             src={picture}
             alt=""
             className="rounded-full border-3 border-pink-300 sm:w-[400px] sm:h-[400px]  object-cover object-center w-[200px] h-[200px]   "
-            initial={{ x: 100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 1.5 }}
+            width={400}
+            height={400}
+            loading="eager"
           />
+          {/* <LazyLoadImage
+            src={picture}
+            effect="blur"
+            className="rounded-full border-3 border-pink-300 sm:w-[400px] sm:h-[400px]  object-cover object-center w-[200px] h-[200px]   "
+          /> */}
         </div>
         <div className=" flex justify-center p-2 items-center">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={containerVarients}
-            className="flex flex-col items-center  lg:items-start gap-4"
-          >
+          <div className="flex flex-col items-center  lg:items-start gap-4">
             <div className="text-center lg:text-justify">
               {' '}
-              <motion.p
-                variants={childVarients}
-                className="leading-relaxed tracking-tighter text-xl text-zinc-400 "
-              >
+              <p className="leading-relaxed tracking-tighter text-xl text-zinc-400 ">
                 Hey, I'm
-              </motion.p>
-              <motion.h1
-                variants={childVarients}
-                className="lg:text-5xl text-4xl flex flex-col  tracking-wider mb-3"
-              >
+              </p>
+              <h1 className="lg:text-5xl text-4xl flex flex-col  tracking-wider mb-3">
                 Bukola
                 <span className="text-zinc-400">Ajamolaya</span>
-              </motion.h1>
-              <motion.h2
-                variants={childVarients}
+              </h1>
+              <h2
                 className={`${
                   theme === 'dark'
                     ? 'bg-gradient-to-r from-[#dbd8e3] to-[#a99fc4]'
@@ -153,25 +109,22 @@ const Hero = () => {
                 } bg-clip-text text-lg   lg:text-2xl tracking-wide text-transparent`}
               >
                 Web Developer
-              </motion.h2>
+              </h2>
             </div>
 
             <div className="flex flex-col">
               {' '}
-              <motion.div variants={childVarients}>
+              <div>
                 <ConatctBtn buttonType={'contact'} buttonStatus={'hero'} />
-              </motion.div>
+              </div>
               <div className="self-end ">
                 <ScribbleOne />
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
-      <motion.a
-        whileInView={{ opacity: 1, x: 0 }}
-        initial={{ opacity: 0, x: 100 }}
-        transition={{ duration: 2.5 }}
+      <a
         className="order-3   flex flex-col items-center gap-2 lg:gap-8 justify-center "
         href="#about"
       >
@@ -184,7 +137,7 @@ const Hero = () => {
         <div className="animate-bounce">
           <ChevronsDown />
         </div>
-      </motion.a>
+      </a>
     </div>
   );
 };

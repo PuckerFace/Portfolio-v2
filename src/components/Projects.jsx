@@ -1,10 +1,13 @@
-import React, { useContext, useState } from 'react';
+import React, { Suspense, useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 import { motion } from 'framer-motion';
 import { PROJECTS } from '../constants';
 import { ChevronFirst } from '../svg/ChevronFirst';
 import { ChevronLast } from '../svg/ChevronLast';
-import ProjectGallary from './ProjectGallary';
+
+import { ErrorBoundary } from 'react-error-boundary';
+import fallbackRender from './ErrorBoundary';
+const ProjectGallary = React.lazy(() => import('./ProjectGallary'));
 
 const Projects = () => {
   const { theme } = useContext(ThemeContext);
@@ -30,7 +33,11 @@ const Projects = () => {
         <h2 className=" absolute top-10 lg:-top-4   z-2 text-4xl">My Works</h2>
       </div>
       <div className="mt-10">
-        <ProjectGallary />
+        <ErrorBoundary fallbackRender={fallbackRender} onReset={() => {}}>
+          <Suspense fallback={<div>Loading...</div>}>
+            <ProjectGallary />
+          </Suspense>
+        </ErrorBoundary>
       </div>
     </div>
   );

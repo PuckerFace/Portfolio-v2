@@ -2,12 +2,25 @@
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="./public/Mylogo.png" />
+    <link rel="icon" type="image/png" href="/Mylogo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bukola A</title>
+    <style>
+      .spinner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #2c2732;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div class="spinner">
+        <img src="Spinner.svg" alt="" />
+      </div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
